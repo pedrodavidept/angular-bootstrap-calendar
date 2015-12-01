@@ -1,7 +1,5 @@
 'use strict';
 
-var angular = require('angular');
-
 angular
   .module('mwl.calendar')
   .controller('MwlCalendarSlideBoxCtrl', function($sce, $scope, $timeout, calendarConfig) {

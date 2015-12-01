@@ -10,7 +10,6 @@ describe('mwlresizable directive', function() {
     interactInstance,
     resizableOptions,
     $compile,
-    $timeout,
     template =
       '<div ' +
       'mwl-resizable="resizable" ' +
@@ -38,10 +37,9 @@ describe('mwlresizable directive', function() {
     $provide.constant('interact', interact);
   }));
 
-  beforeEach(angular.mock.inject(function(_$compile_, _$rootScope_, _$timeout_) {
+  beforeEach(angular.mock.inject(function(_$compile_, _$rootScope_) {
     $compile = _$compile_;
     $rootScope = _$rootScope_;
-    $timeout = _$timeout_;
     scope = $rootScope.$new();
     prepareScope(scope);
 
@@ -121,7 +119,6 @@ describe('mwlresizable directive', function() {
     resizableOptions.onstart(event);
     resizableOptions.onmove(event);
     resizableOptions.onend(event);
-    $timeout.flush();
     expect(scope.onResizeEnd).to.have.been.calledWith(0, 4);
     expect(angular.element(event.target).css('transform')).to.eql('');
     expect(angular.element(event.target).css('width')).to.eql('30px');

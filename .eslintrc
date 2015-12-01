@@ -14,6 +14,8 @@
     "angular"
   ],
   "globals": {
+    "angular" : "angular",
+    "moment" : "moment",
     "EXCLUDE_TEMPLATES": true
   }
 }

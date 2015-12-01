@@ -1,7 +1,5 @@
 'use strict';
 
-var angular = require('angular');
-
 angular
   .module('mwl.calendar')
   .controller('MwlCalendarCtrl', function($scope, $log, $timeout, $attrs, $locale, moment, calendarTitle) {

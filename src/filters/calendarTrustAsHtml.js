@@ -1,7 +1,5 @@
 'use strict';
 
-var angular = require('angular');
-
 angular
   .module('mwl.calendar')
   .filter('calendarTrustAsHtml', function($sce) {

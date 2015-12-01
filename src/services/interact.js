@@ -1,6 +1,5 @@
 'use strict';
 
-var angular = require('angular');
 var interact;
 try {
   interact = require('interact.js');
